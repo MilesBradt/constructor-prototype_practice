@@ -1,57 +1,64 @@
-function Ticket(age, time) {
+function Ticket(age, time, choice) {
   this.customerAge = age;
   this.movieTime = time;
-  this.movieChoice = [];
+  this.movieChoice = choice;
 }
 
 Ticket.prototype.cashOut = function() {
-  var receipt = this.movieChoice + this.customerAge + this.movieTime;
-  // alert(receipt);
-  $(".total").text(receipt);
-}
+  var totalPrice = 12;
+  var customerAge = parseInt(this.customerAge);
+  var ticketRank = parseInt(this.movieChoice);
 
+  if (customerAge >= 65) {
+    totalPrice -= 2;
+  };
+  if (ticketRank == 4) {
+    totalPrice += 3
+  };
+  $(".result").text("$" + totalPrice);
+}
 // Bizness ^
 
 $(document).ready(function(){
   $("#mothra").click(function(event){
     $(".card").hide();
     $("#mothra").show();
-    // We have to set a movieChoice value here!
+    return choice = 4;
   });
   $("#zardoz").click(function(event){
     $(".card").hide();
     $("#zardoz").show();
-
+    return choice = 4;
   });
   $("#geostorm").click(function(event){
     $(".card").hide();
     $("#geostorm").show();
-
+    return choice = 4;
   });
   $("#plan9").click(function(event){
     $(".card").hide();
     $("#plan9").show();
-
+    return choice = 2;
   });
   $("#they-live").click(function(event){
     $(".card").hide();
     $("#they-live").show();
-
+    return choice = 2;
   });
   $("#rancho").click(function(event){
     $(".card").hide();
     $("#rancho").show();
-
+    return choice = 2;
   });
+
   $("form#input-age-time").submit(function(event){
     event.preventDefault();
 
     var ticketAge = $("input#age").val();
     var ticketTime = $("#showtime option:selected").val();
-
-    var ticket = new Ticket(ticketAge, ticketTime);
-
+    var ticketRank = choice;
+    var ticket = new Ticket(ticketAge, ticketTime, ticketRank);
 
     ticket.cashOut();
-  });``
+  });
 });

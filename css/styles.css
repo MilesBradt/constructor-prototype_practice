@@ -1,7 +1,3 @@
-#movie-options {
-
-}
-
 #age {
   background-color: #FFD962;
   color: #2B3A5E;
@@ -37,4 +33,12 @@ h2 {
 body {
   background-color: #0F1A5E;
   color: #FFD962;
+}
+
+/* .result {
+  display: none;
+} */
+
+#result {
+
 }
