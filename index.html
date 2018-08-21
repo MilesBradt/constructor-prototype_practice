@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Movie Ticketer</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Movie Place</h2>
+    </div>
+    <div id="movie-options">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card bg-dark" id="mothra">
+            <img class="card-img" src="img/moth.jpg" alt="Card image">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark" id="zardoz">
+            <img class="card-img" src="img/zardoz.jpg" alt="Card image">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark" id="geostorm">
+            <img class="card-img" src="img/geostorm.jpg" alt="Card image">
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card bg-dark" id="plan9">
+            <img class="card-img" src="img/plan9.jpg" alt="Card image">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark" id="they-live">
+            <img class="card-img" src="img/they-live.jpg" alt="Card image">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark" id="rancho">
+            <img class="card-img" src="img/rancho.jpg" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Subsequent form elements are hidden on load. -->
+    <div class="hidden">
+      <form id="input-age-time">
+        <div class="form-group">
+          <label for="age">Enter your age:</label>
+          <input type="number" class="form-control" id="age">
+        </div>
+        <select class="custom-select" id="showtime">
+          <option selected>What time?</option>
+          <option value="1">9:30 AM</option>
+          <option value="2">12:45 PM</option>
+          <option value="3">4:15 PM</option>
+          <option value="4">8:30 PM</option>
+        </select>
+        <button class="btn-secondary" type="submit">Push me!</button>
+      </form>
+    </div>
+    <div class="total">
+      <p></p>
+    </div>
+  </div>
+</body>
+</html>
