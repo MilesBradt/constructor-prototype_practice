@@ -15,38 +15,44 @@ Ticket.prototype.cashOut = function() {
   if (ticketRank == 4) {
     totalPrice += 3
   };
-  $(".result").text("$" + totalPrice);
+  $("#result").append("<p>Your total price is: $" + totalPrice + ".</p>");
 }
 // Bizness ^
 
 $(document).ready(function(){
   $("#mothra").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#mothra").show();
     return choice = 4;
   });
   $("#zardoz").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#zardoz").show();
     return choice = 4;
   });
   $("#geostorm").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#geostorm").show();
     return choice = 4;
   });
   $("#plan9").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#plan9").show();
     return choice = 2;
   });
   $("#they-live").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#they-live").show();
     return choice = 2;
   });
   $("#rancho").click(function(event){
     $(".card").hide();
+    $(".headers").hide();
     $("#rancho").show();
     return choice = 2;
   });
